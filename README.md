@@ -1,7 +1,6 @@
-For the snippets [please check out this link](https://gist.github.com/nechita/119703b64b6e0528afe3d78692f5c0dc)
+For the snippets [please check out this link](https://gist.github.com/nechita/119703b64b6e0528afe3d78692f5c0dc).
 
-To install your snippets in VS Code [please check out this link]
-(https://code.visualstudio.com/docs/editor/userdefinedsnippets#_creating-your-own-snippets)
+To install your snippets in VS Code [please check out this link](https://code.visualstudio.com/docs/editor/userdefinedsnippets#_creating-your-own-snippets).
 # Agilehub
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.4.

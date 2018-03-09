@@ -1,0 +1,34 @@
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
+import { RouterModule, Routes } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+
+import { HomeComponent } from './components/home/home.component';
+import { NavComponent } from './components/nav/nav.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+
+import { AppComponent } from './containers/app/app.component';
+
+const ROUTES: Routes = [
+  { path: '', component: HomeComponent, pathMatch: 'full' },
+  { path: 'bookmarks', loadChildren: './bookmark-dashboard/bookmark-dashboard.module#BookmarkDashboardModule'},
+  { path: '**', component: NotFoundComponent }
+];
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    NotFoundComponent,
+    NavComponent
+  ],
+  imports: [
+    BrowserModule,
+    CommonModule,
+    RouterModule.forRoot(ROUTES),
+    FormsModule
+  ],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }

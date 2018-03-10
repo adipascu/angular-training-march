@@ -28,7 +28,7 @@ import { Bookmark } from '../../models/bookmark.interface';
         *ngFor="let bookmark of favorites;"
         [detail]="bookmark"
         (edit)="handleEdit($event)"
-        (removeFromFavourites)="handleRemoveFromFavourites($event)"
+        (removeFromFavorites)="handleRemoveFromFavorites($event)"
         (visit)="handleVisit($event)">
       </bookmark-detail>
       <p *ngIf="!favorites?.length">
@@ -83,7 +83,7 @@ export class BookmarkDashboardComponent implements OnInit {
       });
   }
 
-  handleRemoveFromFavourites(event: Bookmark) {
+  handleRemoveFromFavorites(event: Bookmark) {
     this.bookmarkService
       .updateBookmark(event)
       .subscribe((data: Bookmark) => {

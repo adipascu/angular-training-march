@@ -11,14 +11,14 @@
       "title": "Building maintainable Angular applications",
       "url": "https://angular.io",
       "description": "After putting a few projects into production, we’ve come up with a set of ground rules to help build applications with Angular.",
-      "favourite": false,
+      "favorite": false,
       "id": 3
     },
     {
       "title": "Growing Your Audience with Random Affinities",
       "url": "https://moz.com/blog/growing-your-audience-with-random-affinities",
       "description": "Two topics have ‘random affinity’ if they are connected only by a common audience. ",
-      "favourite": false,
+      "favorite": false,
       "id": 6
     },
     {
@@ -26,48 +26,48 @@
       "title": "Mentat Wiki - Ways to become a better thinker",
       "url": "http://www.ludism.org/mentat/HomePage",
       "description": "This wiki is a collaborative environment for exploring ways to become a better thinker. ",
-      "favourite": false
+      "favorite": false
     },
     {
       "id": 8,
       "title": "Rationality Checklist",
       "url": "http://rationality.org/resources/rationality-checklist",
       "description": "This checklist is meant for your personal use, so you can have a wish-list of rationality habits and see if you’re acquiring good habits.",
-      "favourite": false
+      "favorite": false
     },
     {
       "id": 9,
       "title": "12 Rules for Learning Foreign Languages in Record Time — The Only Post You’ll Ever Need",
       "url": "https://tim.blog/2014/03/21/how-to-learn-a-foreign-language-2/",
       "description": "How to learn languages, tips from Benny the Irish Polyglot",
-      "favourite": false
+      "favorite": false
     },
     {
       "id": 10,
       "title": "Health problems I've tried to solve with nutrition",
       "url": "http://www.adnuther.com/list-of-conditions-fixed-and-unfixed/",
       "description": "How to affect health aspects with nutrition",
-      "favourite": false
+      "favorite": false
     },
     {
       "id": 11,
       "title": "Scientific Speed Reading: How to Read 300% Faster in 20 Minutes",
       "url": "https://tim.blog/2009/07/30/speed-reading-and-accelerated-learning/",
       "description": "Simple technique to speed up your reading",
-      "favourite": false
+      "favorite": false
     },
     {
       "title": "Orar autobuz",
       "url": "http://www.ratbv.ro/trasee-si-orare/",
       "description": "Aceasta este o descriere mirobolantă",
-      "favourite": false,
+      "favorite": false,
       "id": 12
     },
     {
       "title": "Acesta este un titlu mai potrivit pt link",
       "url": "https://youtu.be/QaPrQa3oMy0",
       "description": "Aceasta este o descriere mirobolantă",
-      "favourite": true,
+      "favorite": true,
       "id": 13
     }
   ]

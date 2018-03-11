@@ -10,33 +10,7 @@ import { Bookmark } from '../../models/bookmark.interface';
 @Component({
   selector: 'bookmark-dashboard',
   styleUrls: ['bookmark-dashboard.component.scss'],
-  template: `
-    <div class="centered">
-      <div class="bookmark-count">
-        <bookmark-count
-          [items]="bookmarks">
-        </bookmark-count>
-        <div>
-          <button (click)="goToAdd()">+ Quick add</button>
-        </div>
-        <bookmark-card *ngFor="let bookmark of bookmarks;" [card]="bookmark">
-        </bookmark-card>
-      </div>
-      <div class="bookmark-manager">
-      <h2>Favorites</h2>
-      <bookmark-detail
-        *ngFor="let bookmark of favorites;"
-        [detail]="bookmark"
-        (edit)="handleEdit($event)"
-        (removeFromFavorites)="handleRemoveFromFavorites($event)"
-        (visit)="handleVisit($event)">
-      </bookmark-detail>
-      <p *ngIf="!favorites?.length">
-        Don't forget to favorite the ones you like.
-      </p>
-      </div>
-    </div>
-  `
+  templateUrl: './bookmark-dashboard.component.html'
 })
 export class BookmarkDashboardComponent implements OnInit {
   bookmarks: Bookmark[];
@@ -47,7 +21,6 @@ export class BookmarkDashboardComponent implements OnInit {
     private router: Router,
     private route: ActivatedRoute
   ) {
-
   }
 
   ngOnInit() {
@@ -91,22 +64,20 @@ export class BookmarkDashboardComponent implements OnInit {
           if (bookmark.id === event.id) {
             bookmark = Object.assign({}, bookmark, event);
           }
-          this.favorites = this.favorites.filter((favorite: Bookmark) => {
-            return favorite.id !== event.id;
-          });
+          this.favorites = this.favorites.filter((favorite: Bookmark) =>  favorite.id !== event.id);
         });
       });
   }
 
-  // handleRemove(event: Bookmark) {
-  //   this.bookmarkService
-  //     .removeBookmark(event)
-  //     .subscribe((data: Bookmark) => {
-  //       this.bookmarks = this.bookmarks.filter((bookmark: Bookmark) => {
-  //         return bookmark.id !== event.id;
-  //       });
-  //     });
-  // }
+  handleRemove(event: Bookmark) {
+    this.bookmarkService
+      .removeBookmark(event)
+      .subscribe((data: Bookmark) => {
+        this.bookmarks = this.bookmarks.filter((bookmark: Bookmark) => {
+          return bookmark.id !== event.id;
+        });
+      });
+  }
 
   handleVisit(event: Bookmark) {
     this.router.navigateByUrl(event.url);
@@ -115,6 +86,5 @@ export class BookmarkDashboardComponent implements OnInit {
   goToAdd() {
     this.router.navigate(['bookmarks', 'add-new']);
   }
-
 
 }

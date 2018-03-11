@@ -1,0 +1,25 @@
+<div class="centered">
+  <div class="bookmark-count">
+    <bookmark-count
+      [items]="bookmarks">
+    </bookmark-count>
+    <div>
+      <button (click)="goToAdd()">+ Quick add</button>
+    </div>
+    <bookmark-card *ngFor="let bookmark of bookmarks;" [card]="bookmark">
+    </bookmark-card>
+  </div>
+  <div class="bookmark-manager">
+  <h2>Favorites</h2>
+  <bookmark-detail
+    *ngFor="let bookmark of favorites;"
+    [detail]="bookmark"
+    (edit)="handleEdit($event)"
+    (removeFromFavorites)="handleRemoveFromFavorites($event)"
+    (visit)="handleVisit($event)">
+  </bookmark-detail>
+  <p *ngIf="!favorites?.length">
+    Don't forget to favorite the ones you like.
+  </p>
+  </div>
+</div>

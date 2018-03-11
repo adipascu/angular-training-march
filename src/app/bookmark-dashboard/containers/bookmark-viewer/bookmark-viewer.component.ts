@@ -9,21 +9,7 @@ import { Bookmark } from '../../models/bookmark.interface';
 
 @Component({
   selector: 'bookmark-viewer',
-  styleUrls: ['bookmark-viewer.component.scss'],
-  template: `
-    <div class="centered">
-      <div class="bookmark-view">
-      <button (click)="goBack()">&lsaquo; Go Back</button>
-      <bookmark-form
-        [detail]="bookmark"
-        (update)="onUpdateBookmark($event)"
-        (create)="onCreateBookmark($event)"
-        >
-      </bookmark-form>
-      </div>
-    </div>
-    <div class="centered" *ngIf="!isLoaded">Loading bookmark info...</div>
-  `,
+  templateUrl: './bookmark-viewer.component.html'
 })
 export class BookmarkViewerComponent implements OnInit {
   bookmark: Bookmark;
@@ -38,10 +24,8 @@ export class BookmarkViewerComponent implements OnInit {
     this.route.params
       .switchMap((data: Bookmark) => this.bookmarkService.getBookmark(data.id))
       .subscribe((data: Bookmark) => {
-        // added the timeout to simulate a slower connection/loading status
         this.bookmark = data;
         this.isLoaded = true;
-
       });
   }
   onUpdateBookmark(event: Bookmark) {

@@ -1,0 +1,8 @@
+<div class="centered">
+  <div class="bookmark-view">
+    <button (click)="goBack()">&lsaquo; Go Back</button>
+    <bookmark-form [detail]="bookmark" (update)="onUpdateBookmark($event)" (create)="onCreateBookmark($event)">
+    </bookmark-form>
+  </div>
+</div>
+<div class="centered" *ngIf="!isLoaded">Loading bookmark info...</div>

@@ -11,7 +11,8 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { AppComponent } from './containers/app/app.component';
 
 const ROUTES: Routes = [
-  { path: '', component: HomeComponent, pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full'},
+  { path: 'home', component: HomeComponent },
   { path: 'bookmarks', loadChildren: './bookmark-dashboard/bookmark-dashboard.module#BookmarkDashboardModule'},
   { path: '**', component: NotFoundComponent }
 ];

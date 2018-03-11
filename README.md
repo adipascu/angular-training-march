@@ -1,7 +1,21 @@
 For the snippets [please check out this link](https://gist.github.com/nechita/119703b64b6e0528afe3d78692f5c0dc).
 
 To install your snippets in VS Code [please check out this link](https://code.visualstudio.com/docs/editor/userdefinedsnippets#_creating-your-own-snippets).
-# Agilehub
+
+# Recommended courses:
+- the basics of JavaScript: [Watch and Code: Practical JavaScript](https://watchandcode.com/)
+- JavaScript projects + ES6 + Functional Programming Concepts: [Wes Bos - JavaScript 30](https://javascript30.com/)
+- Angular Overview: [Angular 5: The Complete Guide](https://www.udemy.com/the-complete-guide-to-angular-2/)
+
+# TODO:
+
+- run `ng lint` and fix lint warnings
+- extract templates to their own files
+- add all the remaining learning resources ( QuickStart, Todd Motto, Alligator.io)
+
+# Arnia Angular Training March
+
+This repo consists of a sample App, CRUD like app.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.4.
 

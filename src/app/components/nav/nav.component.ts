@@ -5,37 +5,45 @@ import { Component } from '@angular/core';
   styleUrls: ['nav.component.scss'],
   template: `
   <nav class="nav">
-    <a *ngFor="let item of nav" [routerLink]="item.link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: item.exact }">
-      {{ item.name }}
+    <a *ngFor="let item of navigation"
+      [title]="item.title"
+      [routerLink]="item.link"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{exact: item.exact}">
+      {{item.name}}
     </a>
   </nav>
-
   `
 })
 export class NavComponent {
 
-  nav: Nav[] = [
+  navigation: Nav[] = [
     {
-      link: '/',
+      link: '/home',
       name: 'Home',
-      exact: true
+      exact: true,
+      title: 'Something'
     },
     {
       link: '/bookmarks',
       name: 'Bookmarks',
-      exact: true
+      exact: true,
+      title: null
     },
     {
       link: '/bookmarks/add-new',
       name: 'Quick add',
-      exact: true
+      exact: true,
+      title: null
     }
   ];
   constructor() {}
 }
 
 interface Nav {
-  link: string,
-  name: string,
-  exact: boolean
+  link: string;
+  name: string;
+  exact: boolean;
+  order?: number | 0;
+  title: string | null;
 }

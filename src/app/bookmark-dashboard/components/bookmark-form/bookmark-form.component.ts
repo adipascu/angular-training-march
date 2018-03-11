@@ -7,68 +7,7 @@ import { Bookmark } from '../../models/bookmark.interface';
 @Component({
   selector: 'bookmark-form',
   styleUrls: ['bookmark-form.component.scss'],
-  template: `
-<!-- <pre>{{form.value | json}}</pre> -->
-    <form (ngSubmit)="handleSubmit(form.value, form.valid)" #form="ngForm" novalidate>
-      <div>
-        Title:
-        <input
-          type="text"
-          name="title"
-          required
-          #title="ngModel"
-          [ngModel]="detail?.title">
-        <div *ngIf="title?.errors?.required && title.dirty" class="error">
-          Bookmark title is required
-        </div>
-      </div>
-
-      <div>
-        Url:
-        <input
-          type="text"
-          name="url"
-          required
-          #url="ngModel"
-          [ngModel]="detail?.url">
-        <div *ngIf="url?.errors?.required && url.dirty" class="error">
-          Bookmark url is required
-        </div>
-      </div>
-
-       <div>
-        Description:
-        <input
-          type="text"
-          name="description"
-          required
-          #description="ngModel"
-          [ngModel]="detail?.description">
-        <div *ngIf="description?.errors?.required && description.dirty" class="error">
-          Bookmark description is required
-        </div>
-      </div>
-
-      <div>
-        <label>
-        Add to favorites?
-          <input
-            type="checkbox"
-            name="favorite"
-            [ngModel]="detail?.favorite"
-            (ngModelChange)="toggleFavorite($event)">
-        </label>
-      </div>
-      <div *ngIf="form.value.favorite">
-        It's favorited! Just hit update.
-      </div>
-
-      <button type="submit" [disabled]="form.invalid">
-        Update bookmark
-      </button>
-
-    </form>
-  `
+  templateUrl: './bookmark-form.component.html'
 })
 export class BookmarkFormComponent {
 
@@ -87,10 +26,6 @@ export class BookmarkFormComponent {
     private router: Router,
     private route: ActivatedRoute
   ) {
-
-  }
-
-  ngOnInit() {
   }
 
   toggleFavorite(favorite: boolean) {

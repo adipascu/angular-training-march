@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'not-found',
+  selector: 'app-not-found',
   template: `
     <div>
-      Not found, <a routerLink="/">go home</a>?
+      Not found? Go <a routerLink='/home'>home</a>.
     </div>
   `
 })
-export class NotFoundComponent { }
+export class NotFoundComponent {
+  constructor() {}
+}

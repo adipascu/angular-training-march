@@ -19,7 +19,7 @@ import { BookmarkCardComponent } from './components/bookmark-card/bookmark-card.
 import { BookmarkDashboardService } from './bookmark-dashboard.service';
 import { IsUrlValidator } from './containers/bookmark-add/is-url.directive';
 
-const routes: Routes = [
+const ROUTES: Routes = [
   {
     path: '',
     children: [
@@ -45,7 +45,7 @@ const routes: Routes = [
     CommonModule,
     HttpClientModule,
     FormsModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(ROUTES)
   ],
   providers: [
     BookmarkDashboardService

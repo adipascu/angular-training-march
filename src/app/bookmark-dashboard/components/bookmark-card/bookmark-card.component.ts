@@ -5,17 +5,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'bookmark-card',
   styleUrls: ['bookmark-card.component.scss'],
-  template: `
-    <div class="bookmark-card">
-        <h3><a [href]="card.url" target="_blank" rel="noopener">{{card?.title}}</a></h3>
-        <p>{{card?.description}}</p>
-        <p style="text-align:right; ">
-          <a [routerLink]="['./view', card.id]" (click)="goToLink()" style="color: black; text-decoration:underline; font-size: 0.75rem;">
-              Edit bookmark
-          </a>
-        </p>
-    </div>
-  `
+  templateUrl: './bookmark-card.component.html'
 })
 export class BookmarkCardComponent {
   @Input()
@@ -25,8 +15,7 @@ export class BookmarkCardComponent {
   ) { }
 
   goToLink() {
-    this.router.navigate(['bookmarks', 'view', this.card.id])
+    this.router.navigate(['bookmarks', 'view', this.card.id]);
   }
-
 
 }

@@ -1,0 +1,11 @@
+<div class="bookmark-card">
+  <h3>
+    <a [href]="card.url" target="_blank" rel="noopener">{{card?.title}}</a>
+  </h3>
+  <p>{{card?.description}}</p>
+  <p class="align-right">
+    <a class="edit-button" (click)="goToLink()">
+      Edit bookmark
+    </a>
+  </p>
+</div>

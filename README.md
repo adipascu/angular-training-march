@@ -5,13 +5,16 @@ To install your snippets in VS Code [please check out this link](https://code.vi
 # Recommended courses:
 - the basics of JavaScript: [Watch and Code: Practical JavaScript](https://watchandcode.com/)
 - JavaScript projects + ES6 + Functional Programming Concepts: [Wes Bos - JavaScript 30](https://javascript30.com/)
-- Angular Overview: [Angular 5: The Complete Guide](https://www.udemy.com/the-complete-guide-to-angular-2/)
+- Play around with the Angular QuickStart: [Angular QuickStart](https://angular.io/guide/quickstart)
+- Read Todd Motto's Angular Articles about [Reactive Forms](https://toddmotto.com/angular-2-forms-reactive) and [Template Driven Forms](https://toddmotto.com/angular-2-forms-template-driven)
+- Read generic articles about Angular on [Alligator.io](https://alligator.io/angular/)
+- Affordable Angular 5 course: [Angular 5: The Complete Guide](https://www.udemy.com/the-complete-guide-to-angular-2/)
 
 # TODO:
 
-- run `ng lint` and fix lint warnings
-- extract templates to their own files
-- add all the remaining learning resources ( QuickStart, Todd Motto, Alligator.io)
+- [x] run `ng lint` and fix lint warnings
+- [x] extract templates to their own files
+- [x] add all the remaining learning resources ( QuickStart, Todd Motto, Alligator.io)
 
 # Arnia Angular Training March
 
